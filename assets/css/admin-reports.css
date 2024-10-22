@@ -1,0 +1,127 @@
+:root {
+    --report-border: #818181;
+}
+
+a {
+    box-shadow: none!important;
+}
+
+.report-holder {
+    width: 100%;
+    max-width: 840px;
+    border-width: 1px;
+    border-color: #818181;
+    border-style: solid;
+    border-top-width: 3px;    
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.report-row {
+    display: grid;
+    grid-template-columns: 240px 1fr 150px 180px;
+}
+.report-row .report-cell {
+    padding: 10px;
+}
+.report-header {
+    border-bottom: solid 2px var(--report-border);
+    background-color: #c7c7c7;
+}
+.report-header .report-cell,
+.filter-field .label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.report-orders .report-cell {
+    font-size: 16px;
+    border-bottom: solid 1px var(--report-border);    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #fff;
+}
+.report-orders .report-cell:not(:last-child) {
+    border-right: dashed 1px #ccc;
+}
+.report-cell.cta a {    
+    font-weight: 700;
+    font-size: 12px;
+    text-decoration: none;
+    color: #3c434a;
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    grid-gap: 5px;
+    border-radius: 100px;
+    border: dashed 1px #adadad;
+    padding: 5px 10px;
+    width: 120px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.report-cell.cta a:hover {
+    color: #0064ff;    
+}
+.report-cell.cta a span {
+    display: flex;
+    align-items: center;
+}
+.report-cell.cta a svg {
+    width: 100%;
+    height: auto;
+}
+
+.report-cell.person span,
+.report-cell.order-date span {
+    display: inline-block;
+    line-height: 1;
+    padding: 5px 8px;
+    border-radius: 100px;
+    overflow: hidden;    
+    font-weight: 600;
+}
+.report-cell.person,
+.report-cell.order-date {
+    background-color: #f3f6fb;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 5px;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #c7c7c7;
+    border-bottom: solid 2px var(--report-border);
+}
+.filters * {
+    box-sizing: border-box;
+}
+.filter-field {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;    
+}
+.filter-field:not(:last-child) {
+    margin-right: 10px;
+}
+.filter-field .input {
+    width: 100%;
+    border: solid 1px #a5a5a5;
+}
+.filter-field .label {
+    margin-bottom: 3px;
+}
+.filter-cta {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}

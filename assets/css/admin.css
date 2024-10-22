@@ -1,0 +1,510 @@
+:root {
+    --border: #1e1e21;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #9f9f9f;
+    border-radius: 10px;
+}
+
+.fm-page-title {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-gap: 10px;
+    margin-top: -10px!important;
+}
+.fm-page-title svg {
+    width: 100%;
+    height: auto;
+}
+.fm-page-title .fm-title {
+    display: flex;
+    flex-direction: column;
+}
+
+body.fm-no-scroll {
+    overflow-x: hidden!important;
+    overflow-y: hidden!important;
+}
+.wrap h1 {
+    text-transform: uppercase!important;
+    padding-right: 90px!important;
+}
+
+.add-new-form,
+.save-changes,
+.form-settings,
+.preview-form,
+.add-new-order-form {
+    position: fixed;
+    right: 30px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.add-new-form svg,
+.save-changes svg {
+    width: 25px;
+    height: auto;
+}
+.add-new-form {    
+    top: 160px;    
+    background-color: #2271b1;        
+}
+.add-new-form path,
+.add-new-order-form path {
+    fill: #fff;
+}
+.save-changes {   
+    top: 70px;    
+    background-color: #1f9978;        
+}
+.save-changes path {
+    fill: #fff;
+}
+.form-settings {
+    top: 250px;
+    background-color: #fff;
+}
+.preview-form {
+    top: 340px;
+    background-color: #fff;
+}
+.add-new-order-form {
+    top: 70px;
+    background-color: #2271b1;
+}
+
+
+.fm-popup {    
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(000, 000, 000, 0.5);    
+    overflow-x: hidden;
+    overflow-y: auto;    
+}
+.fm-popup form {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fm-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    min-width: 300px;
+}
+.setting-product-form .fm-form,
+.setting-page-form .fm-form {
+    max-width: 700px;
+    width: 100%;
+}
+.fm-form h2 {
+    padding: 0;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.fm-form .instruction {
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: 8px;
+    color: #b30209;
+}
+.fm-form .label,
+.field-inline .label {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+.fm-form input,
+.fm-form textarea {
+    font-size: 18px;
+    padding: 5px 15px;
+    width: 100%;
+}
+.fm-form .order-send-to-email-input {
+    height: 150px;
+    resize: none;
+}
+.fm-field-item {
+    margin-bottom: 20px;
+}
+.field-inline {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+.field-inline .input {
+    margin-right: 5px;
+}
+.field-inline .label {
+    margin-bottom: 0;
+}
+
+.fm-field-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.fm-field-button .button-secondary {
+    margin-right: 10px;
+}
+
+
+.form-holder {
+    max-width: 1100px;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.fm-product {
+    width: 47%;
+    margin-bottom: 50px;    
+}
+.fm-product .product-handle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.product-handle .order-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    width: 30px;
+    cursor: move;
+}
+.product-handle .order-item svg {
+    width: 100%;
+    height: auto;
+    opacity: 0.2;
+}
+.product-handle .order-item:hover svg {
+    opacity: 0.5;
+}
+.product-handle button {    
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    opacity: 0.2;
+    cursor: pointer;
+}
+.product-handle button:hover {
+    opacity: 0.5;
+}
+.product-handle button svg {
+    width: 100%;
+    height: auto;
+}
+.product-handle .field-inline {
+    margin-left: auto;
+}
+.fm-product .product-header {
+    display: grid;
+    grid-template-columns: 1fr 100px 50px;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: solid 1px #ccc;
+    border-left: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+    margin-top: 10px;
+}
+.product-header div {
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.product-header .product-name {
+    padding-left: 40px;
+}
+.product-header .cta {    
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.product-header button {
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #2271b1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.product-header button svg {
+    width: 100%;
+    height: auto;
+}
+.product-header button path {
+    fill: #fff;
+}
+.product-supplies {
+    height: 270px;    
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+    background-color: #fff;
+    padding-bottom: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.supply-item {
+    display: grid;
+    grid-template-columns: 1fr 100px 50px;
+}
+.supply-item div {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.supply-item input {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #f1f1f1;
+    border: solid 1px #c1c1c1;
+}
+.supply-item button {
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: transparent;
+}
+.supply-item button path {
+    fill: #d7d7d7;
+}
+.supply-item button:hover path {
+    fill: #f13636;
+}
+.supply-item .supply-name {
+    display: grid;
+    grid-template-columns: 30px 1fr;    
+}
+.supply-name .order-item {
+    cursor: move;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.2;
+}
+.supply-name .order-item:hover {
+    opacity: 0.5;
+}
+.supply-name .order-item svg {
+    width: 100%;
+    height: auto;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: #1f9978;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #1f9978;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.check-box-label-holder {
+    display: none;
+}
+
+
+
+.order-forms {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    margin-top: 30px;
+}
+.form-item {
+    border-radius: 10px;
+    border: solid 2px #ededed;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+}
+.form-item .item-header {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-gap: 10px;
+    border-bottom: solid 1px #ccc;
+    padding: 20px 20px 10px;
+    background-color: #ebf6ff;
+}
+.form-item .item-header svg {
+    width: 100%;
+    height: auto;
+}
+.item-header .title {
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.item-header .title .status,
+.fm-title .status {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 10px;        
+}
+.status.active {
+    color: #16a085;
+}
+.status.inactive {
+    color: #e74c3c;
+}
+.item-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 76px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;    
+}
+.item-content a {
+    outline: none!important;
+    margin-top: 10px;
+    text-decoration: none;
+
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    grid-gap: 10px;
+    box-shadow: none!important;
+    border: solid 2px #dfdfdf;
+    border-radius: 100px;
+    padding: 6px 10px;
+    width: 160px;
+}
+.item-content a .title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    color: #000;
+}
+.item-content a .icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.item-content a svg {
+    width: 100%;
+    height: auto;
+}
+.item-content a:hover .title {
+    text-decoration: underline;
+    color: #2271b1;
+}
+
+.get-shortcode input {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+}
